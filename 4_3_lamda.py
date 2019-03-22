@@ -31,8 +31,17 @@ print(my_function.__doc__)
 #     print("Arguments:", ham, eggs)
 #     return ham + ' and ' + eggs
 
-f('spam')
+# f('spam')
 # Annotations: {'ham': <class 'str'>, 'return': <class 'str'>, 'eggs': <class 'str'>}
 # Arguments: spam eggs
 # 'spam and eggs'
+
+def add2(n):
+    return n+2
+
+def multiPlus2(n):
+    return lambda x: add2(x*n)
+
+
+print(multiPlus2(3)(5))
 
